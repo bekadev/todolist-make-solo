@@ -2,7 +2,7 @@ import React, {ChangeEvent, useState} from 'react';
 
 type EditableSpanPropsType = {
     title: string
-    changeTtile: (newTitle: string) => void
+    changeTitle: (newTitle: string) => void
 }
 
 export const EditableSpan: React.FC<EditableSpanPropsType> = (props) => {
@@ -13,7 +13,7 @@ export const EditableSpan: React.FC<EditableSpanPropsType> = (props) => {
     }
     const onEditMode = () => setEditMode(true)
     const offEditMode = () => {
-        props.changeTtile(title)
+        props.changeTitle(title)
         setEditMode(false)
     }
     return (
